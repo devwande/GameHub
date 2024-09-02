@@ -15,12 +15,11 @@ const SearchInput = ({ onSearch }: Props) => {
         if (ref.current) return onSearch(ref.current.value);
       }}
     >
-      
       {/* this prevents the form from being posted to the server */}
       <InputGroup>
         <InputLeftElement children={<BsSearch />} />
         <Input
-        ref={ref}
+          ref={ref}
           borderRadius={20}
           placeholder="Search games..."
           variant="filled"
