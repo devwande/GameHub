@@ -11,6 +11,7 @@ export interface Platform {
   slug: string; // slug is basically a textual id, it's better to rely on the slug because it's not going to change
 }
 
+
 const useGames = () => {
   const gameQuery = useGameQueryStore((s) => s.gameQuery);
   return useInfiniteQuery<FetchResponse<Game>, Error>({

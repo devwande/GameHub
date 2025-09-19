@@ -17,7 +17,8 @@ interface GameQueryStore {
 
 const useGameQueryStore = create<GameQueryStore>((set) => ({
   gameQuery: {},
-  setSearchText: (searchText) => set(() => ({ gameQuery: { searchText } })),
+  setSearchText: (searchText) =>
+    set((store) => ({ gameQuery: { ...store.gameQuery, searchText } })),
   setGenreId: (genreId) =>
     set((store) => ({ gameQuery: { ...store.gameQuery, genreId } })),
   setPlatformId: (platformId) =>
